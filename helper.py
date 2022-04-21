@@ -1,7 +1,7 @@
 import xml.etree.ElementTree as ET
 from io import BytesIO
 
-
+# this will return XML Response with address details
 def createXmlResponse(Obj):
     root = ET.Element("root")
     document = ET.ElementTree(root)
@@ -18,7 +18,7 @@ def createXmlResponse(Obj):
     root.append(location)
     return root
 
-
+# this method will extract required address details from XML tree and returns Dictionary of with values
 def createXMLResObj(tree):
     xmlValObj = {}
     root = tree.getroot()
